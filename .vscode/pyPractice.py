@@ -3,19 +3,6 @@ class Node:
         self.data = data
         self.next = None
         self.prev = None
-
-class DoublyLinkedList:
-    def __init___(self):
-        self.head = None
-
-    def print(self):
-        temp = self.head
-        print("None <-> ", end = "" )
-        while temp.next is not None:
-            print(temp.data, end=" <-> ")
-            temp = temp.next
-        print("None")
-
         
 class LinkedList:
     def __init__(self):
@@ -29,6 +16,8 @@ class LinkedList:
             cur = cur.next
 
         print("None")
+
+    
 
 
     """insert after:
@@ -142,15 +131,3 @@ SingleLst.head = SingleLst.deleteHead()
 SingleLst.print()
 SingleLst.head = SingleLst.deleteAtPos(1)
 SingleLst.print()
-
-print("\n")
-
-dll = DoublyLinkedList()
-dll.head = Node(10)
-dll.head.next = Node(20)
-dll.head.next.prev = dll.head
-dll.head.next.next = Node(30)
-dll.head.next.next.prev = dll.head.next
-dll.head.next.next.next = Node(40)
-
-dll.print()
